@@ -22,7 +22,7 @@ SECRET_KEY = 'i0ud2(0%k0b_l-wpdxzp=ai#i+&c(ve3hd6w4w4b3$l83)a_bq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['lucaagostoni.pythonanywhere.com']
 
 
 # Application definition
@@ -104,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'it'
 
 TIME_ZONE = 'UTC'
 
