@@ -22,7 +22,7 @@ SECRET_KEY = 'i0ud2(0%k0b_l-wpdxzp=ai#i+&c(ve3hd6w4w4b3$l83)a_bq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['lucaagostoni.pythonanywhere.com']
+ALLOWED_HOSTS = ['lucaagostoni.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -48,13 +48,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'primo_progetto.urls'
+ROOT_URLCONF = 'progetto1.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'prima_app/templates'),
-                 os.path.join(BASE_DIR, 'seconda_app/templates')
+                 os.path.join(BASE_DIR, 'seconda_app/templates'),
+                 os.path.join(BASE_DIR, 'templates'),
                  ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -68,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'primo_progetto.wsgi.application'
+WSGI_APPLICATION = 'progetto1.wsgi.application'
 
 
 # Database
@@ -104,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'it'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
