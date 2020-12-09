@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block head_title %} {{block.super}} | {{libreria}}{% endblock head_title %}
+
+    <h1>Libreria Agostoni</h1>
+    <br>
+    {%for libro in object_list %}
+        <h4><strong>Titolo: </strong>{{libro.titolo}}</h4>
+        <h4><strong>Autore: </strong><a href="{{libro.autore.get_absolute_url}}">{{libro.autore}}</a></h4>
+        <h4><strong>Genere: </strong>{%for genere in libro.genere.all %} {{genere}} {% endfor %}</h4>
+        <h4><strong>ISBN : </strong>{{libro.isbn}}</h4>
+        <hr>
+    {% endfor %}
+{% endblock contente %}
