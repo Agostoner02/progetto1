@@ -30,8 +30,8 @@ class Autore_AL(models.Model):
 class Libro_AL(models.Model):
     titolo = models.CharField(max_length=100)
     isbn = models.CharField(max_length=13)
-    autore = models.ForeignKey(Libro_AL, on_delete=models.CASCADE, related_name="libri")
-    genere = models.ManyToManyField(Libro_AL)
+    autore = models.ForeignKey(Libro, on_delete=models.CASCADE, related_name="libri")
+    genere = models.ManyToManyField(Libro)
 
     def _str_(self):
         return self.titolo
