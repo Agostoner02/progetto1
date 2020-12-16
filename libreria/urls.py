@@ -1,8 +1,8 @@
 from django.urls import path, include
-from views import LibroList_AL, AutoreDetail_Al
+from views import LibroList, AutoreDetail
 
 urlpatterns = [
-    path('', LibroList_AL.as_view(), name='lista_libri'),
-    path('autore/<int:pk>/ ', AutoreDetail_AL.as_view(), name='profilo_autore')
+    path('', LibroList.as_view(), name='lista_libri'),
+    path('autore/<int:pk>/ ', AutoreDetail.as_view(), name='profilo_autore')
     
 ]

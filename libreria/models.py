@@ -2,7 +2,7 @@ from django.db import models
 from django.urls import reverse
 # Create your models here.
 
-class Genere_AL(models.Model):
+class Genere(models.Model):
     nome = models.CharField(max_length=20)
 
     def _str_(self):
@@ -12,7 +12,7 @@ class Genere_AL(models.Model):
         verbose_name = "Genere"
         verbose_name_plural = "Generi"
 
-class Autore_AL(models.Model):
+class Autore(models.Model):
     nome = models.CharField(max_length=20)
     cognome = models.CharField(max_length=20)
     nazione = models.CharField(max_length=20)
@@ -27,7 +27,7 @@ class Autore_AL(models.Model):
         verbose_name = "Autore"
         verbose_name_plural = "Autori"
 
-class Libro_AL(models.Model):
+class Libro(models.Model):
     titolo = models.CharField(max_length=100)
     isbn = models.CharField(max_length=13)
     autore = models.ForeignKey(Libro, on_delete=models.CASCADE, related_name="libri")
