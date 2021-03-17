@@ -1,10 +1,20 @@
 {% extends 'base.html'%}
 {%block title%}
-    {{articolo.titolo}}
+	{{ articolo.titolo }}
 {%endblock title%}
 
 {%block content%}
- <h1>{{articolo.titolo}}</h1>
- <h3>{{articolo.contenuto}}</h3>
- <h5>Autore: {{articolo.giornalista}}</h5>
+  <h1>{{ articolo.titolo }}</h1>
+  <p>{{ articolo.contenuto }}</p>
+  <p>Autore: <a href="{% url 'news:giornalista_detail' pk=articolo.giornalista.id %}">
+    {{ articolo.giornalista.nome }} {{ articolo.giornalista.cognome }}
+  </a></p>
+
+  <a
+    class="btn btn-primary"
+    role="button"
+    href="{% url 'news:articoli_list' %}"
+  >
+    Lista degli articoli
+  </a>
 {%endblock content%}

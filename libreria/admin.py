@@ -1,7 +1,6 @@
 from django.contrib import admin
-from .models import Autore, Genere, Libro
-# Register your models here.
+from .models import AutoreAL, GenereAL, LibroAL
 
-admin.site.register(Autore)
-admin.site.register(Genere)
-admin.site.register(Libro)
+admin.site.register(GenereAL)
+admin.site.register(AutoreAL)
+admin.site.register(LibroCDAL)

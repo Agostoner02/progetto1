@@ -1,14 +1,9 @@
 {% extends 'base.html'%}
 {%block title%}
-    Lista Giornalisti
+	Giornalisti
 {%endblock title%}
 
 {%block content%}
-  <h4>Giornalisti:</h4>
-  <br>
-  {% for giornalista in giornalisti %}
-  <p><strong>Giornalista: </strong><a href="/news/giornalisti/{{ giornalista.id }}">{{ giornalista.nome }} {{ giornalista.cognome }}</a></p>
-    
-  {% endfor %}
-
+  <h3>Giornalisti</h3>
+  {% include 'includes/giornalisti_list.html' %}
 {%endblock content%}

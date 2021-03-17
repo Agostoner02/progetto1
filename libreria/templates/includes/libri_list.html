@@ -1,0 +1,18 @@
+{% if not libri %}
+<h5 class="text-muted"><em>Non ci sono libri...</em></h5>
+{% endif %}
+
+{% for libro in libri %}
+<div class="card mt-3 mb-3">
+  <div class="card-body">
+    <h5 class="card-title"><a href="{% url 'libreria:libro_detail' pk=libro.autore.id %}">
+        {{ libro.titolo }}
+      </a></h5>
+    <p>ISBN: {{ libro.isbn }}</p>
+    <p>Autore: <a href="{% url 'libreria:autore_detail' pk=libro.autore.id %}">
+        {{ libro.autore.nome }}
+      </a></p>
+    <p>Generi: {{ libro.generi.all|join:", " }}</p>
+  </div>
+</div>
+{% endfor %}

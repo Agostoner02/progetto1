@@ -1,0 +1,14 @@
+{% if not autori %}
+<h5 class="text-muted"><em>Non ci sono autori...</em></h5>
+{% endif %}
+
+{% for autore in autori %}
+<div class="card mt-3 mb-3">
+  <div class="card-body">
+    <h5 class="card-title"><a href="{% url 'libreria:autore_detail' pk=autore.id %}">
+        {{ autore.nome }}
+      </a></h5>
+    <p>Nazione: {{ autore.nazione }}</p>
+  </div>
+</div>
+{% endfor %}

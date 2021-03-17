@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{%block title%}
+	{{ libro.titolo }}
+{%endblock title%}
+
+{%block content%}
+  <h1>{{ libro.titolo }}</h1>
+  <p>ISBN: {{ libro.isbn }}</p>
+  <p>Autore: <a href="{% url 'libreria:autore_detail' pk=libro.autore.id %}">
+    {{ libro.autore.nome }}
+  </a></p>
+  <p>Generi: {{ libro.generi.all|join:", " }}</p>
+
+  <a
+    class="btn btn-primary"
+    role="button"
+    href="{% url 'libreria:libri_list' %}"
+  >
+    Lista dei libri
+  </a>
+{%endblock content%}

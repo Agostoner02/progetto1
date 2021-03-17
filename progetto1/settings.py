@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'seconda_app',
     'news',
     'libreria',
+    'forms_app',
 ]
 
 MIDDLEWARE = [
