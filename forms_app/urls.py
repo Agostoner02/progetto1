@@ -5,3 +5,4 @@ app_name = 'forms_app'
 urlpatterns = [
     path('contatti/', contatti, name="contatti")
 ]
+#ciao
