@@ -29,7 +29,7 @@ class LibroAL(models.Model):
     isbn = models.CharField(max_length=13)
     autore = models.ForeignKey(
         AutoreAL, on_delete=models.CASCADE, related_name="libri")
-    generi = models.ManyToManyField(GenereCD)
+    generi = models.ManyToManyField(GenereAL)
 
     class Meta:
         verbose_name = 'Libro'

@@ -32,9 +32,9 @@
                         Prima app
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{% url 'prima_app:homepage' %}">Homepage</a>
+                        <a class="dropdown-item" href="{% url 'prima_app:home' %}">Homepage</a>
                         <a class="dropdown-item" href="{% url 'prima_app:menu' %}">Menu</a>
-                        <a class="dropdown-item" href="{% url 'prima_app:chi-siamo' %}">Chi siamo</a>
+                        <a class="dropdown-item" href="{% url 'prima_app:chisiamo' %}">Chi siamo</a>
                         <a class="dropdown-item" href="{% url 'prima_app:variabili' %}">Variabili</a>
                         <a class="dropdown-item" href="{% url 'prima_app:index' %}">Index</a>
                     </div>
@@ -47,7 +47,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{% url 'seconda_app:if' %}">Esercizio if</a>
                         <a class="dropdown-item" href="{% url 'seconda_app:ifelse' %}">Esercizio if-else</a>
-                        <a class="dropdown-item" href="{% url 'seconda_app:ifelif' %}">Esercizio if-elif</a>
+                        <a class="dropdown-item" href="{% url 'seconda_app:elif' %}">Esercizio if-elif</a>
                         <a class="dropdown-item" href="{% url 'seconda_app:for' %}">Esercizio for</a>
                     </div>
                 </li>
@@ -58,8 +58,8 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{% url 'news:homeview' %}">Homepage news</a>
-                        <a class="dropdown-item" href="{% url 'news:lista_articoli' %}">Lista articoli</a>
-                        <a class="dropdown-item" href="{% url 'news:lista_giornalisti' %}">Lista giornalisti</a>
+                        <a class="dropdown-item" href="{% url 'news:articoli_list' %}">Lista articoli</a>
+                        <a class="dropdown-item" href="{% url 'news:giornalisti_list' %}">Lista giornalisti</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -68,8 +68,8 @@
                         Libreria
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{% url 'libreria:lista_libri' %}">Lista libri</a>
-                        <a class="dropdown-item" href="{% url 'libreria:lista_autori' %}">Lista autori</a>
+                        <a class="dropdown-item" href="{% url 'libreria:libri_list' %}">Lista libri</a>
+                        <a class="dropdown-item" href="{% url 'libreria:autori_list' %}">Lista autori</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'news',
     'libreria',
     'forms_app',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -130,4 +131,4 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/'
 
- EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
